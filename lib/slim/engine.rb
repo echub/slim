@@ -63,6 +63,7 @@ module Slim
     use Slim::Compiler, :disable_capture, :attr_delimiter
     use Temple::HTML::AttributeMerger, :attr_delimiter, :sort_attrs
     use Temple::HTML::Pretty, :format, :attr_wrapper, :pretty, :indent
+    filter :CommentRemover
     filter :Escapable, :use_html_safe, :disable_escape
     filter :ControlFlow
     filter :MultiFlattener
